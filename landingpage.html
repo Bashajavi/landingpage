@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Banner and Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner, .footer {
+            width: 100%;
+            height: 400px; /* Adjust the height as needed */
+            background-size: cover; /* Makes the image cover the entire section */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .banner {
+            background-image: url('banner.png'); /* Replace with your image URL */
+        }
+
+        .footer {
+            background-image: url('footer.webp'); /* Replace with your image URL */
+            height: 400px; /* Adjust the height as needed */
+            font-size: 1.5em;
+        }
+
+        .content, .content-reverse {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers the content horizontally */
+            align-items: center; /* Centers the content vertically */
+            padding: 20px;
+            text-align: justify; /* Justify the text */
+        }
+
+        .content img, .content-reverse img {
+            width: 100%;
+            max-width: 400px; /* Adjust the max-width as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .content-reverse img {
+            order: 2;
+            margin-top: 20px;
+        }
+
+        .content-text, .content-reverse-text {
+            max-width: 600px; /* Adjust the max-width as needed */
+            text-align: justify; /* Justify the text */
+        }
+
+        .content-text h2, .content-reverse-text h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-align: center; /* Center the heading */
+        }
+
+        .content-text p, .content-reverse-text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 10px;
+            max-width: 300px;
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 300px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 768px) {
+            .content, .content-reverse {
+                flex-direction: row;
+            }
+
+            .content img {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            .content-reverse img {
+                margin-left: 20px;
+                margin-bottom: 0;
+            }
+
+            .content-reverse img {
+                order: 1;
+                margin-top: 0;
+            }
+
+            .content-text, .content-reverse-text {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .banner, .footer {
+                height: auto;
+                padding: 20px;
+                font-size: 1.5em;
+            }
+
+            .banner {
+                font-size: 1.5em;
+                height: 50vh; /* Set height to 50% of viewport height */
+            }
+
+            .footer {
+                font-size: 1em;
+                height: 50vh; /* Set height to 50% of viewport height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="banner">
+        Welcome to AI 
+    </section>
+
+    <section class="content">
+        <img src="secure.jpg" alt="Security"> <!-- Replace with your image URL -->
+        <div class="content-text">
+            <h2>Security</h2>
+            <p>
+                Our top priority is ensuring the security of your data. We implement the latest security protocols
+                and continuously monitor our systems to protect against any threats.
+            </p>
+            <p>
+                With our robust security measures, you can rest assured that your information is safe with us.
+                Trust and transparency are the cornerstones of our security strategy.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-reverse">
+        <div class="content-reverse-text">
+            <h2>Data Analysis</h2>
+            <p>
+                Our data analysis services provide valuable insights to help you make informed decisions. We use
+                advanced analytics tools to gather, process, and interpret data, turning information into actionable
+                strategies.
+            </p>
+            <p>
+                Whether you're looking to optimize your operations or understand market trends, our data analysis
+                experts are here to assist you every step of the way.
+            </p>
+        </div>
+        <img src="dataanalysis.jpg" alt="Data Analysis"> <!-- Replace with your image URL -->
+    </section>
+
+    <section class="content">
+        <img src="automation.jpg" alt="Automation"> <!-- Replace with your image URL -->
+        <div class="content-text">
+            <h2>Automation</h2>
+            <p>
+                Embrace the future with our cutting-edge automation solutions. We help businesses streamline their
+                processes, reduce manual efforts, and enhance productivity through intelligent automation.
+            </p>
+            <p>
+                From simple task automation to complex workflows, our solutions are designed to meet the unique
+                needs of your business, driving efficiency and growth.
+            </p>
+        </div>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <img src="SMART-CITY.jpg" alt="Smart City"> <!-- Replace with your image URL -->
+            <h3>Smart City Solutions</h3>
+            <p>Our smart city solutions leverage advanced technologies to create efficient, sustainable urban environments.</p>
+        </div>
+        <div class="card">
+            <img src="space.jpg" alt="Space Exploration"> <!-- Replace with your image URL -->
+            <h3>Space Exploration</h3>
+            <p>Explore the universe with our cutting-edge space exploration technologies and services.</p>
+        </div>
+        <div class="card">
+            <img src="Verticle-Farming.jpg" alt="Vertical Farming"> <!-- Replace with your image URL -->
+            <h3>Vertical Farming</h3>
+            <p>Revolutionize agriculture with our innovative vertical farming solutions, maximizing space and resources.</p>
+        </div>
+    </section>
+
+    <section class="footer">
+        
+    </section>
+</body>
+</html>
